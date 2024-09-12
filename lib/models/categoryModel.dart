@@ -1,0 +1,45 @@
+import 'dart:ui';
+
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+class CategoryModel {
+  String id;
+  String name;
+  String image;
+  Color color;
+
+  CategoryModel({required this.id,
+    required this.name,
+    required this.image,
+    required this.color});
+
+  static List<CategoryModel> getCategory() {
+    return [
+      CategoryModel(id: 'business',
+          name: "Business",
+          image: "assets/images/bussines.png",
+          color: Color(0xffCF7E48)),
+      CategoryModel(id: "entertainment",
+          name: "Entertainment",
+          image: "assets/images/environment.png",
+          color: Color(0xff4882CF)),
+      CategoryModel(id: "general",
+          name: "Politics",
+          image: "assets/images/Politics.png",
+          color: Color(0xff003E90)),
+      CategoryModel(id: "health",
+          name: "Health",
+          image: "assets/images/health.png",
+          color: Colors.pink),
+      CategoryModel(id: "science",
+          name: "Science",
+          image: "assets/images/science.png",
+          color: Colors.yellow),
+      CategoryModel(id: "sports",
+          name: "Sports",
+          image: "assets/images/ball.png",
+          color: Colors.red)
+    ];
+  }
+}
