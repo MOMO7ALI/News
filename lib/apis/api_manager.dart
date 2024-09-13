@@ -6,11 +6,11 @@ import 'package:news_app/models/NewsData.dart';
 import 'package:news_app/models/NewsData.dart';
 
 class ApiManager {
-  //https://newsapi.org/v2/top-headlines/sources?apiKey=eb586d30f2da49c980ee970f48409e3a
+  //https://newsapi.org/v2/top-headlines/sources?apiKey=901eb63076fb4775b57dac3d0a419e59
 
   static Future<SourceResponse> getScources(String id) async {
     Uri url = Uri.https("newsapi.org", "/v2/top-headlines/sources",
-        {"apiKey": "8e6ad1f40189495f9dcc85876452c9a6", "category": id});
+        {"apiKey": "901eb63076fb4775b57dac3d0a419e59", "category": id});
     http.get(url);
 
     http.Response response = await http.get(url);
@@ -23,7 +23,7 @@ class ApiManager {
   static Future<NewsDataResponse> getNewsData(
       {String? sourceId, String? query}) async {
     Uri url = Uri.https("newsapi.org", "/v2/everything", {
-      "apiKey": "8e6ad1f40189495f9dcc85876452c9a6",
+      "apiKey": "901eb63076fb4775b57dac3d0a419e59",
       "sources": sourceId,
       "q": query
     });
